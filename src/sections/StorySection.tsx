@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function StorySection() {
   return (
-    <section className="bg-white py-16 px-8 text-[#121212] ">
+    <section className="bg-white py-16 px-8  ">
       <div className=" mx-auto text-center">
         <h2 className="text-[24px] md:text-[48px] font-bold mb-6">
-          우리는 이렇게 데이트하고 있었다..ㅠㅠ
+          우리는 이렇게 데이트하고 있었다..😢
         </h2>
-        <p className="text-lg sm:text-xl leading-relaxed mb-8">
+        <p className="text-lg sm:text-xl leading-relaxed mb-16">
           연애/인연은 매일을 쌓아가는 일.
           <br />
           <br />

@@ -1,11 +1,11 @@
 export default function FeatureSection() {
   return (
-    <section className=" flex flex-col items-center py-10 pb-32 px-8 text-[#121212] bg-gradient-to-b from-white to-[#E9F7FA]">
-      <div className="text-center text-[#5B8992] mb-16 bg-[#E9F7FA] w-fit p-4 border-2 border-[#89B3BB] border-dashed rounded-4xl">
-        <p className="text-sm sm:text-base ">
+    <section className=" flex flex-col items-center py-10 pb-32 px-8 bg-gradient-to-b from-white to-[#E9F7FA]">
+      <div className="text-center font-medium text-[#5B8992] mb-16 bg-[#E9F7FA] px-10 py-5 border-2 border-[#89B3BB] border-dashed rounded-[30px]">
+        <p className="text-md sm:text-base ">
           이건 단순한 커플 앱이 아니에요. <span className="font-semibold">(속닥)</span>
         </p>
-        <p className="text-sm sm:text-base ">
+        <p className="text-md sm:text-base ">
           환경을 지키는 커플들의 비밀 아지트예요.
           <span role="img" aria-label="earth">
             🤫
@@ -13,7 +13,7 @@ export default function FeatureSection() {
         </p>
       </div>
 
-      <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
         우이미에서는 이렇게{" "}
         <span className="bg-gradient-to-r from-[#11AC4F] to-[#1EBAE1] bg-clip-text text-transparent">
           지구를 지켜요
@@ -35,7 +35,7 @@ export default function FeatureSection() {
           </div>
         ))}
       </div>
-      <p className="text-center text-sm sm:text-base text-[#121212] mt-8">
+      <p className="text-center text-sm sm:text-base  mt-8">
         텀블러 쓰기, 대중교통 이용하기, 플로깅 인증하기.
         <br />
         <strong>작은 행동들이 쌓이면, 아름다운 우리만의 세계가 만들어져요.</strong>

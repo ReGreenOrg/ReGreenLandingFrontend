@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import pretendard from "./fonts/pretendard";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import SmoothScrollProvider from "./provider";
 
 export const metadata: Metadata = {
   title: "우리는 이별을 미루기로 했다.",
@@ -24,7 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
+      <body className={`${pretendard.className} antialiased bg-white`}>
+        <SmoothScrollProvider />
         {children}
       </body>
     </html>

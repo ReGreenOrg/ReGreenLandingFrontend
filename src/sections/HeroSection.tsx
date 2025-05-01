@@ -113,7 +113,7 @@ export default function HeroSection() {
         <div className="relative z-20 flex flex-col items-center justify-center h-full">
           {/* 메인 타이틀 + 서브1 */}
           <div
-            className=" text-2xl md:text-[54px] sm:text-5xl font-bold leading-snug text-[#121212]"
+            className=" text-2xl md:text-[54px] sm:text-5xl font-bold leading-snug "
             ref={titleRef}
           >
             지구가 망하면
@@ -147,7 +147,7 @@ export default function HeroSection() {
           {/* wooimi 텍스트 */}
           <div
             ref={wooimiRef}
-            className="absolute  right-[-100px] md:right-[-100px]  lg:right-16 text-[31px] text-black"
+            className="absolute  right-[-100px] md:right-[-100px]  lg:right-16 text-[31px] "
           >
             wooimi
           </div>
