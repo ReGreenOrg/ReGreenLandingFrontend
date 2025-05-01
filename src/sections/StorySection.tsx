@@ -1,10 +1,67 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
+
+gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(ScrollTrigger);
+
+CustomEase.create(
+  "ultraSnailFill",
+  "M0,0 C0.05,0 0.1,0.01 0.2,0.03 S0.4,0.12 0.5,0.22 S0.75,0.7 1,1"
+);
 export default function StorySection() {
+  const sectionRef = useRef(null);
+  const gradientRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=300",
+          scrub: true,
+        },
+      });
+
+      tl.to(gradientRef.current, {
+        width: "20%",
+        duration: 3,
+        ease: "ultraSnailFill",
+      })
+        .to(gradientRef.current, {
+          width: "40%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "60%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "80%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "100%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="bg-white py-16 px-8  ">
+    <section className=" flex flex-col justify-center items-center bg-white text-center relative overflow-hidden">
       <div className=" mx-auto text-center">
-        <h2 className="text-[24px] md:text-[48px] font-bold mb-6">
+        <h2 ref={sectionRef} className="text-[24px] md:text-[48px] font-bold mb-6">
           우리는 이렇게 데이트하고 있었다..😢
         </h2>
         <p className="text-lg sm:text-xl leading-relaxed mb-16">
@@ -39,7 +96,24 @@ export default function StorySection() {
         <div className="flex flex-col items-center ">
           <h2 className="text-2xl sm:text-3xl font-bold mt-16 mb-6 leading-relaxed">
             그래서 <br />
-            우리는 <span className="text-[#FF4385]">지구를 지키는 데이트</span>를 하기로 했다.
+            <div className="flex justify-center items-center gap-2">
+              <div>우리는 </div>
+              <div className="relative inline-block overflow-hidden leading-none  text-2xl sm:text-3xl font-bold">
+                {/* 회색 기본 텍스트 */}
+                <span className="block text-transparent bg-clip-text bg-gray-300 whitespace-nowrap leading-none">
+                  지구를 지키는 데이트
+                </span>
+
+                {/* 핑크 덮기 텍스트 */}
+                <span
+                  ref={gradientRef}
+                  className="absolute top-1/2 left-0 transform -translate-y-1/2 block text-transparent bg-clip-text bg-[#FF4385] whitespace-nowrap leading-none w-0 overflow-hidden"
+                >
+                  지구를 지키는 데이트
+                </span>
+              </div>
+              <div>를 하기로 했다.</div>
+            </div>
           </h2>
           <p className="text-lg sm:text-xl leading-relaxed mb-8">
             우리는 다르게 해보기로 했다.

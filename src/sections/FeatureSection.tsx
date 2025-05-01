@@ -1,6 +1,65 @@
+"use client";
+
+import gsap from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(ScrollTrigger);
+CustomEase.create(
+  "ultraSnailFill",
+  "M0,0 C0.05,0 0.1,0.01 0.2,0.03 S0.4,0.12 0.5,0.22 S0.75,0.7 1,1"
+);
+
 export default function FeatureSection() {
+  const sectionRef = useRef(null);
+  const gradientRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=300",
+          scrub: true,
+        },
+      });
+
+      tl.to(gradientRef.current, {
+        width: "20%",
+        duration: 3,
+        ease: "ultraSnailFill",
+      })
+        .to(gradientRef.current, {
+          width: "40%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "60%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "80%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        })
+        .to(gradientRef.current, {
+          width: "100%",
+          duration: 3,
+          ease: "ultraSnailFill",
+        });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className=" flex flex-col items-center py-10 pb-32 px-8 bg-gradient-to-b from-white to-[#E9F7FA]">
+    <section className="relative flex flex-col items-center py-10 pb-32 px-8 bg-gradient-to-b from-white to-[#E9F7FA]">
+      <div ref={sectionRef} className="absolute top-[-250px]" />
       <div className="text-center font-medium text-[#5B8992] mb-16 bg-[#E9F7FA] px-10 py-5 border-2 border-[#89B3BB] border-dashed rounded-[30px]">
         <p className="text-md sm:text-base ">
           이건 단순한 커플 앱이 아니에요. <span className="font-semibold">(속닥)</span>
@@ -14,10 +73,23 @@ export default function FeatureSection() {
       </div>
 
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
-        우이미에서는 이렇게{" "}
-        <span className="bg-gradient-to-r from-[#11AC4F] to-[#1EBAE1] bg-clip-text text-transparent">
-          지구를 지켜요
-        </span>
+        <div className="flex justify-center items-center gap-2">
+          <div>우이미에서는 이렇게 </div>
+          <div className="relative inline-block overflow-hidden leading-none  text-2xl sm:text-3xl font-bold">
+            {/* 회색 기본 텍스트 */}
+            <span className="block text-transparent bg-clip-text bg-gray-300 whitespace-nowrap leading-none">
+              지구를 지켜요
+            </span>
+
+            {/* 핑크 덮기 텍스트 */}
+            <span
+              ref={gradientRef}
+              className="absolute top-1/2 left-0 transform -translate-y-1/2 block text-transparent bg-clip-text bg-gradient-to-r from-[#11AC4F] to-[#1EBAE1] whitespace-nowrap leading-none w-0 overflow-hidden"
+            >
+              지구를 지켜요
+            </span>
+          </div>
+        </div>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
         {[
