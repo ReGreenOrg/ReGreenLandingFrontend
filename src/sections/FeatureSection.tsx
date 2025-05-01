@@ -73,7 +73,7 @@ export default function FeatureSection() {
       </div>
 
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-2">
           <div>우이미에서는 이렇게 </div>
           <div className="relative inline-block overflow-hidden leading-none  text-2xl sm:text-3xl font-bold">
             {/* 회색 기본 텍스트 */}
@@ -93,24 +93,32 @@ export default function FeatureSection() {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
         {[
-          { icon: "💖", text: "환경 보호 활동 인증하고 하트 모으기" },
-          { icon: "🏡", text: "하트 모아서 우리만의 아지트 꾸미기" },
-          { icon: "🎁", text: "둘이 함께 인증해서 추가 보상 받기" },
-          { icon: "🌍", text: "지구를 지키고 이별을 미루기" },
+          { icon: "💖", text: "환경 보호 활동 인증하고 <br/>  하트 모으기" },
+          { icon: "🏡", text: "하트 모아서 <br/> 우리만의 아지트 꾸미기" },
+          { icon: "🎁", text: "둘이 함께 인증해서  <br/>  추가 보상 받기" },
+          { icon: "🌍", text: "지구를 지키고  <br/>  이별을 미루기" },
         ].map((feature, index) => (
           <div
             key={index}
             className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-[#FFB1CC]"
           >
             <div className="text-3xl">{feature.icon}</div>
-            <p className="mt-4 text-md font-semibold">{feature.text}</p>
+            <p
+              className="mt-4 text-md font-semibold"
+              dangerouslySetInnerHTML={{ __html: feature.text }}
+            />
           </div>
         ))}
       </div>
-      <p className="text-center text-sm sm:text-base  mt-8">
-        텀블러 쓰기, 대중교통 이용하기, 플로깅 인증하기.
+      <p className="text-center  text-md sm:text-base  mt-10 md:mt-8">
+        텀블러 쓰기, <br className="block md:hidden" />
+        대중교통 이용하기, <br className="block md:hidden" /> 플로깅 인증하기.
         <br />
-        <strong>작은 행동들이 쌓이면, 아름다운 우리만의 세계가 만들어져요.</strong>
+        <br className="block md:hidden" />
+        <strong>
+          작은 행동들이 쌓이면, <br className="block md:hidden" /> 아름다운 우리만의 세계가
+          만들어져요.
+        </strong>
       </p>
     </section>
   );

@@ -89,7 +89,10 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
             id="privacyConsent"
             className="w-5 h-5 appearance-none border-2 border-gray-300 rounded-full checked:bg-[#FF8EB3] checked:border-[#FF8EB3] focus:outline-none focus:ring-2 focus:ring-pink-300 cursor-pointer relative"
           />
-          <label htmlFor="privacyConsent" className="ml-3 text-sm sm:text-base text-gray-600">
+          <label
+            htmlFor="privacyConsent"
+            className="ml-3 text-sm sm:text-base text-gray-600 text-center"
+          >
             개인정보 동의(필수) - 출시 알림을 위해서만 사용됩니다.
           </label>
         </div>

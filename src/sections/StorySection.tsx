@@ -59,7 +59,7 @@ export default function StorySection() {
   }, []);
 
   return (
-    <section className=" flex flex-col justify-center items-center bg-white text-center relative overflow-hidden">
+    <section className=" flex flex-col justify-center  pb-16 items-center bg-white text-center relative overflow-hidden">
       <div className=" mx-auto text-center">
         <h2 ref={sectionRef} className="text-[24px] md:text-[48px] font-bold mb-6">
           우리는 이렇게 데이트하고 있었다..😢
@@ -71,8 +71,8 @@ export default function StorySection() {
           그런데 요즘은,
           <br /> 지구가 망해가서 그 <strong>&apos;매일&apos;</strong>조차 불안하다...
         </p>
-        <div className="bg-[#505A50] lg:mx-48 py-10 text-white  rounded-lg">
-          <div className="px-0 sm:px-6">
+        <div className="bg-[#505A50]  py-10 text-white  rounded-lg">
+          <div className="mx-0 md:mx-16 lg:mx-32">
             <h3 className="text-xl font-semibold text-center mb-6">
               데이트를 하면서 저지르는 환경오염
             </h3>
@@ -83,7 +83,7 @@ export default function StorySection() {
                 { src: "/storyImage3.jpg", alt: "불필요한 종이", label: "불필요한 종이" },
               ].map(({ src, alt, label }) => (
                 <div key={alt} className="flex flex-col items-center !gap-2">
-                  <div className="w-[140px] h-[80px] md:w-[180px] md:h-[120px] lg:w-[220px] lg:h-[160px] overflow-hidden rounded-lg relative">
+                  <div className="w-[200px] h-[120px] md:w-[180px] md:h-[120px] lg:w-[220px] lg:h-[160px] overflow-hidden rounded-lg relative">
                     <Image src={src} alt={alt} fill className="object-cover" />
                   </div>
                   <p className="text-md font-medium text-center">{label}</p>
@@ -96,21 +96,23 @@ export default function StorySection() {
         <div className="flex flex-col items-center ">
           <h2 className="text-2xl sm:text-3xl font-bold mt-16 mb-6 leading-relaxed">
             그래서 <br />
-            <div className="flex justify-center items-center gap-2">
-              <div>우리는 </div>
-              <div className="relative inline-block overflow-hidden leading-none  text-2xl sm:text-3xl font-bold">
-                {/* 회색 기본 텍스트 */}
-                <span className="block text-transparent bg-clip-text bg-gray-300 whitespace-nowrap leading-none">
-                  지구를 지키는 데이트
-                </span>
+            <div className="flex md:flex-row flex-col justify-center items-center gap-2">
+              <div className="flex flex-row justify-center items-center gap-2">
+                <div>우리는</div>
+                <div className="relative inline-block overflow-hidden leading-none  text-2xl sm:text-3xl font-bold">
+                  {/* 회색 기본 텍스트 */}
+                  <span className="block text-transparent bg-clip-text bg-gray-300 whitespace-nowrap leading-none">
+                    지구를 지키는 데이트
+                  </span>
 
-                {/* 핑크 덮기 텍스트 */}
-                <span
-                  ref={gradientRef}
-                  className="absolute top-1/2 left-0 transform -translate-y-1/2 block text-transparent bg-clip-text bg-[#FF4385] whitespace-nowrap leading-none w-0 overflow-hidden"
-                >
-                  지구를 지키는 데이트
-                </span>
+                  {/* 핑크 덮기 텍스트 */}
+                  <span
+                    ref={gradientRef}
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 block text-transparent bg-clip-text bg-[#FF4385] whitespace-nowrap leading-none w-0 overflow-hidden"
+                  >
+                    지구를 지키는 데이트
+                  </span>
+                </div>
               </div>
               <div>를 하기로 했다.</div>
             </div>
@@ -126,7 +128,7 @@ export default function StorySection() {
             alt="arrow"
             width={20}
             height={50}
-            className="animate-bounce mt-16 mb-[-32px]"
+            className="animate-bounce mt-8 mb-[-32px]"
           />
         </div>
       </div>

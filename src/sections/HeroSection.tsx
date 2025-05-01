@@ -113,13 +113,13 @@ export default function HeroSection() {
         <div className="relative z-20 flex flex-col items-center justify-center h-full">
           {/* 메인 타이틀 + 서브1 */}
           <div
-            className=" text-2xl md:text-[54px] sm:text-5xl font-bold leading-snug "
+            className=" text-3xl md:text-[54px] sm:text-5xl font-bold leading-snug"
             ref={titleRef}
           >
             지구가 망하면
             <br />
             우리의 연애도 끝난다!
-            <div className="text-md md:text-[24px] font-semibold sm:text-xl leading-relaxed text-[#222222]">
+            <div className="text-lg md:text-[24px] font-semibold sm:text-xl leading-relaxed text-[#222222]">
               연애도, 지구도 오래 가야 하니까.
               <br />
               <strong>우</strong>리는 <strong>이</strong>별을 <strong>미</strong>루기로 했다.
