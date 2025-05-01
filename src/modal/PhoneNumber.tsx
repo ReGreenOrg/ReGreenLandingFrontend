@@ -1,4 +1,4 @@
-// import { postPhoneNumber } from "./postPhoneNumber";
+import { postPhoneNumber } from "@/lib/firebase/postPhoneNumber";
 
 interface PhoneNumberModalProps {
   close: () => void;
@@ -34,11 +34,18 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
     }
 
     try {
-      // await postPhoneNumber(phoneNumber);
-      alert("전화번호가 성공적으로 등록되었습니다!");
-      close();
-    } catch {
-      alert("전화번호 등록에 실패했습니다. 다시 시도해주세요.");
+      const result = await postPhoneNumber(phoneNumber);
+
+      if (result?.success) {
+        alert("✅ 전화번호가 성공적으로 등록되었습니다!");
+        close();
+      } else if (result?.reason === "duplicate") {
+        alert("⚠️ 이미 등록된 전화번호입니다.");
+      } else {
+        alert("❌ 전화번호 등록에 실패했습니다. 다시 시도해주세요.");
+      }
+    } catch (e) {
+      alert("❌ 예기치 못한 오류가 발생했습니다.");
     }
   };
 
