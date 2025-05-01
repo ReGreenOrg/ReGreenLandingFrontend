@@ -44,7 +44,7 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
       } else {
         alert("❌ 전화번호 등록에 실패했습니다. 다시 시도해주세요.");
       }
-    } catch (e) {
+    } catch {
       alert("❌ 예기치 못한 오류가 발생했습니다.");
     }
   };
