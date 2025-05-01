@@ -54,7 +54,7 @@ export default function HeroSection() {
         {
           x: 0,
           left: "50%",
-          y: 0,
+          y: 30,
           transform: "translateX(-50%)",
         },
         0
@@ -73,7 +73,7 @@ export default function HeroSection() {
         {
           x: 48,
           right: "50%",
-          y: 72,
+          y: 102,
           transform: "translateX(50%)",
         },
         0
@@ -131,7 +131,9 @@ export default function HeroSection() {
             ref={subtitleRef}
             className="mt-24 md:mt-0 text-md md:text-[24px] sm:text-xl leading-relaxed text-[#222222] opacity-0"
           >
-            <strong>우</strong>리는 <strong>이</strong>별을 <strong>미</strong>루기로 했다.
+            <strong className="font-extrabold">우</strong>리는{" "}
+            <strong className="font-extrabold">이</strong>별을{" "}
+            <strong className="font-extrabold">미</strong>루기로 했다.
           </div>
 
           {/* 로고 이미지 */}
