@@ -36,18 +36,19 @@ export default function HeroSection() {
       // 메인 타이틀 사라짐
       tl.to(titleRef.current, { opacity: 0, y: -50 }, 0);
 
-      // 서브텍스트2 커지고 올라옴
       tl.to(
         subtitleRef.current,
         {
           scale: 1.8,
-          y: -200,
-          opacity: 1,
-          color: "#121212",
+          y: () => {
+            const vw = window.innerWidth;
+            if (vw < 640) return -120; // 모바일
+            else if (vw < 1024) return -150; // 태블릿
+            else return -170; // 데스크탑
+          },
         },
         0
       );
-
       // 이미지(로고) 이동
       tl.to(
         logoRef.current,
@@ -119,23 +120,19 @@ export default function HeroSection() {
             지구가 망하면
             <br />
             우리의 연애도 끝난다!
-            <div className="text-lg md:text-[24px] font-semibold sm:text-xl leading-relaxed text-[#222222]">
+            <div className="text-lg md:text-[24px] font-semibold sm:text-xl leading-relaxed ">
               연애도, 지구도 오래 가야 하니까.
-              <br />
-              <strong>우</strong>리는 <strong>이</strong>별을 <strong>미</strong>루기로 했다.
             </div>
-          </div>
-
+          </div>{" "}
           {/* 서브텍스트2 (분리됨) */}
           <div
             ref={subtitleRef}
-            className="mt-24 md:mt-0 text-md md:text-[24px] sm:text-xl leading-relaxed text-[#222222] opacity-0"
+            className="text-lg  md:text-[24px] font-semibold  sm:text-xl leading-relaxed  "
           >
             <strong className="font-extrabold">우</strong>리는{" "}
             <strong className="font-extrabold">이</strong>별을{" "}
             <strong className="font-extrabold">미</strong>루기로 했다.
           </div>
-
           {/* 로고 이미지 */}
           <div
             ref={logoRef}
@@ -143,7 +140,6 @@ export default function HeroSection() {
           >
             <Image src="/textlogo_02.svg" alt="logo" width={100} height={100} />
           </div>
-
           {/* wooimi 텍스트 */}
           <div
             ref={wooimiRef}

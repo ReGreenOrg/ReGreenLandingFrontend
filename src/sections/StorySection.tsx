@@ -23,7 +23,12 @@ export default function StorySection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=300",
+          end: () => {
+            const vw = window.innerWidth;
+            if (vw < 640) return "+=500"; // 모바일
+            else if (vw < 1024) return "+=400"; // 태블릿
+            else return "+=300"; // 데스크탑
+          },
           scrub: true,
         },
       });
