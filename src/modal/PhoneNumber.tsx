@@ -91,9 +91,11 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
           />
           <label
             htmlFor="privacyConsent"
-            className="ml-3 text-sm sm:text-base text-gray-600 text-center"
+            className="ml-0 md:ml-3  w-full flex justify-center items-center text-sm sm:text-base text-gray-600 "
           >
-            개인정보 동의(필수) - 출시 알림을 위해서만 사용됩니다.
+            개인정보 동의(필수) <p className="hidden md:block">-</p>
+            <br className="md:hidden" />
+            출시 알림을 위해서만 사용됩니다.
           </label>
         </div>
 
