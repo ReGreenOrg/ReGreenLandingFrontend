@@ -97,12 +97,40 @@ export default function HeroSection() {
         {/* Gradient 배경 */}
         <div
           ref={gradientRef}
-          className="absolute inset-0 z-0"
+          className="absolute  inset-0 z-0 flex items-center justify-between"
           style={{
             background:
               "linear-gradient(129.26deg, #FF7AD9 -5.08%, #F1C9D5 29.55%, #ECE4D4 50.63%, #CBF0BF 81.24%, #A7FEA7 99.31%)",
           }}
-        />
+        >
+          <div className="relative w-[10%] md:w-[15%] lg:w-[30%] h-[3px]">
+            <Image
+              src="/lineImage.svg"
+              alt="background"
+              fill
+              className="object-cover h-[3px] w-[50px] md:w-[100px] lg:w-[200px]"
+            />
+          </div>
+
+          <div className=" flex lg:gap-32 relative w-[10%]  md:w-[15%] lg:w-[30%] h-[3px]">
+            <div className="relative w-[83%]">
+              <Image
+                src="/lineImage.svg"
+                alt="background"
+                fill
+                className="object-cover h-[3px] w-[50px] md:w-[100px] lg:w-[200px]"
+              />
+            </div>
+            <div className="relative w-[17%]">
+              <Image
+                src="/lineImage.svg"
+                alt="background"
+                fill
+                className="object-cover h-[3px] w-[50px] md:w-[100px] lg:w-[200px]"
+              />
+            </div>
+          </div>
+        </div>
 
         {/* 흰색 오버레이 */}
         <div
@@ -143,7 +171,7 @@ export default function HeroSection() {
           {/* wooimi 텍스트 */}
           <div
             ref={wooimiRef}
-            className="absolute  right-[-100px] md:right-[-100px]  lg:right-16 text-[31px] "
+            className="absolute right-[-100px] md:right-[-100px] lg:right-16 text-[31px] "
           >
             wooimi
           </div>
