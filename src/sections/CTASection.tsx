@@ -20,10 +20,9 @@ export default function CTASection() {
         🎉 우이미는 5월 16일에 출시됩니다!
       </p>
       <p className="sm:text-xl mb-6">
-        지금 사전 예약하면,{" "}
-        <strong>
-          가구를 구매할 수 있는 <br className="block md:hidden" /> 하트 10개를 먼저 드려요!
-        </strong>
+        지금 사전 예약하고
+        <br className="block md:hidden " />
+        <strong>&nbsp;비밀 혜택을 받아보세요!</strong>
       </p>
       <button
         onClick={handleClick}
