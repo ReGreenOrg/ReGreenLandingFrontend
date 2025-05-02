@@ -30,6 +30,10 @@ export default function Footer() {
         <p>아리그린 - 제휴·문의 </p>
         <a href="mailto:wooimiregreen@gmail.com" className="text-[#343434] hover:underline">
           wooimiregreen@gmail.com
+        </a>{" "}
+        <p>Instargram </p>
+        <a href="https://www.instagram.com/wooimi_/" className="text-[#343434] hover:underline">
+          @wooimi_
         </a>
       </div>
     </footer>
