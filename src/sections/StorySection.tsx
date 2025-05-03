@@ -64,7 +64,7 @@ export default function StorySection() {
   }, []);
 
   return (
-    <section className=" flex flex-col justify-center  pb-16 items-center bg-white text-center relative overflow-hidden">
+    <section className=" mt-32 flex flex-col justify-center  pb-16 items-center bg-white text-center relative overflow-hidden">
       <div className=" mx-auto text-center">
         <h2 ref={sectionRef} className="text-[24px] md:text-[48px] font-bold mb-6">
           우리는 이렇게 데이트하고 있었다..😢
