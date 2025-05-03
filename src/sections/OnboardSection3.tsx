@@ -47,9 +47,9 @@ const OnboardSection3: React.FC = () => {
       ref={sectionRef}
       className="bg-[#A9C1D0] py-20 text-center min-h-[100vh]  flex items-start justify-center"
     >
-      <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto space-y-12 mt-40 font-regular">
+      <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto space-y-12 mt-40 ">
         {/* 각 대화 말풍선 */}
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -58,7 +58,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -67,7 +67,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -76,7 +76,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start ㅓ gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start ㅓ gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -85,7 +85,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -94,7 +94,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -104,7 +104,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -113,7 +113,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -122,7 +122,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -131,7 +131,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -140,7 +140,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 bubble-group">
+        <div className="flex items-start gap-3 bubble-group">
           <span className="text-2xl">🧑</span>
           <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">
@@ -150,7 +150,7 @@ const OnboardSection3: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start gap-3 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
           <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
             <p style={{ margin: "auto" }} className=" sm:text-lg ">

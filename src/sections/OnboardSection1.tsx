@@ -8,63 +8,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OnboardSection1: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const italicTextRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%", // 섹션이 화면의 80%에 도달했을 때 시작
-          end: () => {
-            const vw = window.innerWidth;
-            if (vw < 640) return "+=500"; // 모바일
-            else if (vw < 1024) return "+=400"; // 태블릿
-            else return "+=300"; // 데스크탑
-          },
-          scrub: 0.5, // 스크롤 동기화 속도를 느리게 설정
-          immediateRender: false, // 초기 상태 유지
+      ScrollTrigger.matchMedia({
+        all: () => {
+          const groups = sectionRef.current?.querySelectorAll(":scope .bubble-group") || [];
+
+          gsap.fromTo(
+            groups,
+            { opacity: 0, y: 60, scale: 1.05 },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.8,
+              stagger: 0.4,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top center",
+                end: "+=800",
+                scrub: false,
+                once: true, // 한 번만 실행 (선택사항)
+                markers: false, // true로 하면 디버깅 가능
+              },
+            }
+          );
         },
       });
-
-      // 애니메이션 정의
-      tl.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
-      );
-
-      tl.fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power2.out" }
-      );
-
-      tl.fromTo(
-        descriptionRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "power2.out" }
-      );
-
-      tl.fromTo(
-        italicTextRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.9, ease: "power2.out" }
-      );
-
-      // 배경색 전환 애니메이션 추가
-      tl.to(
-        sectionRef.current,
-        {
-          backgroundColor: "#ffffff", // 다음 섹션과 자연스럽게 이어지는 색상
-          duration: 1,
-          ease: "power2.out",
-        },
-        "-=0.5"
-      ); // 마지막 애니메이션과 겹치도록 설정
     }, sectionRef);
 
     return () => ctx.revert();
@@ -73,21 +45,38 @@ const OnboardSection1: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-gray-100 py-8 text-center h-screen  flex items-center justify-center"
+      className="bg-[#A9C1D0] py-20 text-center min-h-[100vh]  flex items-start justify-center"
     >
-      <div className="max-w-3xl mx-auto">
-        <h2 ref={titleRef} className="font-bold mb-4 text-2xl sm:text-3xl">
-          “우리도 뭔가 좋은 일 같이 해볼까?”
-        </h2>
-        <p ref={subtitleRef} className="mb-2 text-lg sm:text-xl">
-          “좋지. 근데… 뭐부터 해야 할지 모르겠어.”
-        </p>
-        <p ref={descriptionRef} className="text-gray-600 mb-4 text-base sm:text-lg">
-          “그러니까. 봉사는 시간 안 맞고, 기부는 좀 거리감 있고…”
-        </p>
-        <p ref={italicTextRef} className="italic text-gray-500">
-          그 마음, 우리만 그런 거 아니래.
-        </p>
+      <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto space-y-12 mt-40 font-regular">
+        {/* 각 대화 말풍선 */}
+        <div className="flex gap-3 bubble-group">
+          <span className="text-2xl">👩</span>
+          <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-left bubble">
+            나 요즘 좀 찝찝해. 플라스틱 쓰레기도 많고… <br className="block md:hidden" /> 뭔가 내가
+            더럽히는 느낌?
+          </div>
+        </div>
+        <div className="flex gap-3 bubble-group flex-row-reverse">
+          <span className="text-2xl">🧑</span>
+          <div className="bg-white px-4 py-2 rounded-lg text-right bubble">
+            나도 그래. 뭔가 해야 할 것 같긴 한데 <br className="block md:hidden" /> 막상 뭐부터 해야
+            할지 모르겠어.
+          </div>
+        </div>
+        <div className="flex gap-3 bubble-group">
+          <span className="text-2xl">👩</span>
+          <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-left bubble">
+            나도. 검색하면 정보는 많은데, <br className="block md:hidden" /> 다 너무 어렵고 거창해
+            보이더라.
+          </div>
+        </div>
+        <div className="flex gap-3 bubble-group flex-row-reverse">
+          <span className="text-2xl">🧑</span>
+          <div className="bg-white px-4 py-2 rounded-lg text-right bubble">
+            근데 우연히 봤는데 ‘우이미’라는 앱이 있더라. <br className="block md:hidden" /> 커플이
+            환경 실천 같이 하는 거래.
+          </div>
+        </div>
       </div>
     </div>
   );

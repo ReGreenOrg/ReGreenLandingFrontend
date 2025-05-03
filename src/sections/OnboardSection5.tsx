@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const OnboardSection2: React.FC = () => {
+const OnboardSection5: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,29 +53,56 @@ const OnboardSection2: React.FC = () => {
           <div className="flex gap-3 bubble-group">
             <span className="text-2xl">🧑</span>
             <div className="bg-white px-4 py-2 rounded-lg text-left bubble">
-              분리수거 하려다가 포기했어. <br className="block md:hidden" /> 이건 뚜껑 따야 하나,
-              라벨 떼야 하나…
+              우리 요즘 데이트 루틴 너무 똑같지 않아? <br className="block md:hidden" /> 영화, 밥,
+              카페…
             </div>
           </div>
           <div className="flex gap-3 bubble-group flex-row-reverse">
             <span className="text-2xl">👩</span>
             <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
-              나도 진짜 헷갈려서 그냥 버릴 때 많아. <br className="block md:hidden" /> 잘하고 싶어도
-              어려운 게 많아.
+              ㅋㅋ 인정. 뭔가 특별한 거 해보고 싶은데 <br className="block md:hidden" /> 막상
+              떠오르는 게 없지.
             </div>
           </div>
           <div className="flex gap-3 bubble-group">
             <span className="text-2xl">🧑</span>
             <div className="bg-white px-4 py-2 rounded-lg text-left bubble">
-              근데 어떤 커플이 ‘우이미’ 쓰는 후기 올렸더라. <br className="block md:hidden" /> 매일
-              미션처럼 알려준대.
+              근데 요즘 환경 문제도 많잖아. <br className="block md:hidden" /> 그냥 그걸 테마로
+              잡아볼까?
             </div>
           </div>
           <div className="flex gap-3 bubble-group flex-row-reverse">
             <span className="text-2xl">👩</span>
             <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
-              헐 그럼 나 같은 사람한테 완전 딱이네… <br className="block md:hidden" /> 같이 해보면
-              재밌을 것 같아.
+              오 재밌겠다. 일상에서 조금씩 바꾸면서 <br className="block md:hidden" /> 우리만의
+              미션처럼 해보는 거지?
+            </div>
+          </div>
+          <div className="flex gap-3 bubble-group">
+            <span className="text-2xl">🧑</span>
+            <div className="bg-white px-4 py-2 rounded-lg text-left bubble">
+              응! 나 ‘우이미’라는 앱 봤는데 <br className="block md:hidden" /> 진짜 그런
+              컨셉이더라고.
+            </div>
+          </div>
+          <div className="flex gap-3 bubble-group flex-row-reverse">
+            <span className="text-2xl">👩</span>
+            <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
+              미션 성공하면 하트 모이고, <br className="block md:hidden" /> 둘이 꾸미는 아지트도
+              생긴대.
+            </div>
+          </div>
+          <div className="flex gap-3 bubble-group">
+            <span className="text-2xl">🧑</span>
+            <div className="bg-white px-4 py-2 rounded-lg text-left bubble">
+              오… 우리만의 공간이라니. <br className="block md:hidden" /> 나 그런 거 완전 좋아하지.
+            </div>
+          </div>
+          <div className="flex gap-3 bubble-group flex-row-reverse">
+            <span className="text-2xl">👩</span>
+            <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
+              그럼 오늘부터 우이미 시작하자. <br className="block md:hidden" /> 그냥 우리식 데이트로
+              만들어보자!
             </div>
           </div>
         </div>
@@ -84,4 +111,4 @@ const OnboardSection2: React.FC = () => {
   );
 };
 
-export default OnboardSection2;
+export default OnboardSection5;

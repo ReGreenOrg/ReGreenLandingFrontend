@@ -81,7 +81,7 @@ export default function StorySection() {
             <h3 className="text-xl font-semibold text-center mb-6">
               데이트를 하면서 저지르는 환경오염
             </h3>
-            <div className="flex flex-col md:flex-row justify-center gap-4  md:gap-4  lg:gap-8">
+            <div className="flex flex-col md:flex-row justify-center gap-4  md:gap-4  lg:gap-10">
               {[
                 { src: "/storyImage1.jpg", alt: "배달음식 쓰레기", label: "배달음식 쓰레기" },
                 { src: "/storyImage2.jpg", alt: "플라스틱 커피잔", label: "플라스틱 커피잔" },

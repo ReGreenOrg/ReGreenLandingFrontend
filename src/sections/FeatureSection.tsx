@@ -91,7 +91,7 @@ export default function FeatureSection() {
           </div>
         </div>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-4xl mx-auto">
         {[
           { icon: "💖", text: "환경 보호 활동 인증하고 <br/>  하트 모으기" },
           { icon: "🏡", text: "하트 모아서 <br/> 우리만의 아지트 꾸미기" },

@@ -2,14 +2,14 @@ import CTASection from "@/sections/CTASection";
 import FeatureSection from "@/sections/FeatureSection";
 import Footer from "@/sections/Footer";
 import HeroSection from "@/sections/HeroSection";
-import OnboardSection2 from "@/sections/OnboardSection2";
+import OnboardSection3 from "@/sections/OnboardSection3";
 import StorySection from "@/sections/StorySection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <OnboardSection2 />
+      <OnboardSection3 />
       <StorySection />
       <FeatureSection />
       <CTASection />
