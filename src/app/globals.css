@@ -29,3 +29,16 @@ textarea {
   background: transparent;
   color: var(--foreground);
 }
+
+p {
+  font-weight: 600; /* semibold */
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 1rem; /* Consistent spacing */
+  font-size: 1rem; /* Default font size */
+}
+
+@media (min-width: 640px) {
+  p {
+    font-size: 1.125rem; /* Slightly larger font size for larger screens */
+  }
+}

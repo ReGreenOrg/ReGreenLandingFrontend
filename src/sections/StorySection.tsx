@@ -76,7 +76,7 @@ export default function StorySection() {
           그런데 요즘은,
           <br /> 지구가 망해가서 그 <strong>&apos;매일&apos;</strong>조차 불안하다...
         </p>
-        <div className="bg-[#505A50]  py-10 text-white  rounded-lg">
+        <div className="bg-[#505A50]  py-10 text-white  mt-16 rounded-lg">
           <div className="mx-0 md:mx-16 lg:mx-32">
             <h3 className="text-xl font-semibold text-center mb-6">
               데이트를 하면서 저지르는 환경오염

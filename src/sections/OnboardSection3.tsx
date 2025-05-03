@@ -47,76 +47,115 @@ const OnboardSection3: React.FC = () => {
       ref={sectionRef}
       className="bg-[#A9C1D0] py-20 text-center min-h-[100vh]  flex items-start justify-center"
     >
-      <div className="w-[80%] md:w-[60%] mx-auto space-y-12 mt-40">
+      <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto space-y-12 mt-40 font-regular">
         {/* 각 대화 말풍선 */}
         <div className="flex items-start gap-4 bubble-group">
           <span className="text-2xl">🧑</span>
-          <div className="bg-white p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “요즘 왜 이렇게 미세먼지 심한 거야… 하늘이 맨날 뿌옇네.”
-            </h2>
-            <p className="text-base sm:text-lg">
-              “그러니까. 나도 요즘 괜히 숨 쉬는 것도 신경 쓰이더라. 마스크 안 쓰면 목 아픈 느낌
-              들어.”
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              요즘 미세먼지 너무 심하지 않아?
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-4 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
-          <div className="bg-[#FFE53A] p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “근데 이런 거 보면 우리 진짜 뭔가 해야 하는 거 아닌가 싶지 않아?”
-            </h2>
-            <p className="text-base sm:text-lg">
-              “나도 그 생각은 자주 하는데… 뭘 해야 할지 모르겠어. 그냥 텀블러 챙기는 거 말고는…”
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              맞아. 숨 쉬는 것도 신경 쓰여.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-4 bubble-group">
           <span className="text-2xl">🧑</span>
-          <div className="bg-white p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “맞아. 막상 실천하려고 하면, 뭐부터 해야 할지도 모르겠고.”
-            </h2>
-            <p className="text-base sm:text-lg">
-              “예전에 분리수거도 나름 신경 썼는데, 요즘은 헷갈리는 게 너무 많아.”
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              뭔가 해야 할 것 같긴 한데…
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+        <div className="flex items-start ㅓ gap-4 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
-          <div className="bg-[#FFE53A] p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “그냥 누가 ‘이거 하나만 해도 돼’ 하면 할 수 있을 것 같은데?”
-            </h2>
-            <p className="text-base sm:text-lg">
-              “응. 하루에 하나씩 미션처럼 주면 나도 해볼 마음 생길 것 같아.”
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              텀블러 쓰는 거 말고는 모르겠어.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-4 bubble-group">
           <span className="text-2xl">🧑</span>
-          <div className="bg-white p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “우리 그냥 그런 거 하나 정해서 같이 해볼까?”
-            </h2>
-            <p className="text-base sm:text-lg">
-              “좋다! 데이트 미션처럼. 텀블러 챙기기, 플로깅 하기… 이런 거?”
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              실천하려고 하면 뭐부터 <br className="  block  md:hidden" /> 해야 할지 모르겠어.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-4 flex-row-reverse bubble-group">
           <span className="text-2xl">👩</span>
-          <div className="bg-[#FFE53A] p-4 rounded-lg text-left max-w-full bubble">
-            <h2 className="font-bold mb-2 text-lg sm:text-xl">
-              “그럼 인증샷도 남기고, 우리 미션 성공률도 기록하고!”
-            </h2>
-            <p className="text-base sm:text-lg">“오~ 의미 있는 커플 되는 기분?”</p>
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              괜히 잘못하면 더 문제 <br className="  block  md:hidden" />
+              만들까 봐 걱정돼.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 bubble-group">
+          <span className="text-2xl">🧑</span>
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              그냥 이거 해봐 하면 좋을 텐데.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+          <span className="text-2xl">👩</span>
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              미션처럼 하나씩 알려주면 좋겠어.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 bubble-group">
+          <span className="text-2xl">🧑</span>
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              우리 그런 거 하나 정해서 해볼까?
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+          <span className="text-2xl">👩</span>
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              텀블러 챙기기, 플로깅 하기… 이런 거?
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 bubble-group">
+          <span className="text-2xl">🧑</span>
+          <div className="bg-white px-4 py-2 rounded-lg text-left max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              인증샷도 남기고,
+              <br className="  block  md:hidden" /> 기록도 하면 재밌겠다!
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 flex-row-reverse bubble-group">
+          <span className="text-2xl">👩</span>
+          <div className="bg-[#FFE53A] text-right px-4 py-2 rounded-lg max-w-full bubble">
+            <p style={{ margin: "auto" }} className=" sm:text-lg ">
+              의미 있는 커플 되는 거지!
+            </p>
           </div>
         </div>
       </div>
