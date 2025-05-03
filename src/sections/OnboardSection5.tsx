@@ -60,8 +60,7 @@ const OnboardSection5: React.FC = () => {
           <div className="flex gap-3 bubble-group flex-row-reverse">
             <span className="text-2xl">👩</span>
             <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
-              ㅋㅋ 인정. 뭔가 특별한 거 해보고 싶은데 <br className="block md:hidden" /> 막상
-              떠오르는 게 없지.
+              ㅋㅋ 인정. 뭔가 특별한 거 해보고 싶은데 막상 떠오르는 게 없지
             </div>
           </div>
           <div className="flex gap-3 bubble-group">
@@ -74,8 +73,8 @@ const OnboardSection5: React.FC = () => {
           <div className="flex gap-3 bubble-group flex-row-reverse">
             <span className="text-2xl">👩</span>
             <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
-              오 재밌겠다. 일상에서 조금씩 바꾸면서 <br className="block md:hidden" /> 우리만의
-              미션처럼 해보는 거지?
+              오 재밌겠다. 일상에서 <br className="block md:hidden" /> 우리만의 미션처럼 해보는
+              거지?
             </div>
           </div>
           <div className="flex gap-3 bubble-group">
@@ -101,7 +100,7 @@ const OnboardSection5: React.FC = () => {
           <div className="flex gap-3 bubble-group flex-row-reverse">
             <span className="text-2xl">👩</span>
             <div className="bg-[#FFE53A] px-4 py-2 rounded-lg text-right bubble">
-              그럼 오늘부터 우이미 시작하자. <br className="block md:hidden" /> 그냥 우리식 데이트로
+              그럼 오늘부터 우이미 해보장 <br className="block md:hidden" /> 그냥 우리식 데이트로
               만들어보자!
             </div>
           </div>

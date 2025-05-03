@@ -8,10 +8,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-100 py-6">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col justify-center items-center gap-4">
         {/* 설문 참여 섹션 */}
-        <div className="flex justify-center gap-4 items-center">
-          <p className="text-sm md:text-lg flex items-center font-semibold">
+        <div className="flex justify-center gap-4 items-center ">
+          <p className="text-sm md:text-lg font-semibold">
             🎁 설문 참여하고 스타벅스 기프티콘 받기
           </p>
           <Link
@@ -24,17 +24,20 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-
       {/* 하단 회사 정보 섹션 */}
-      <div className="flex gap-4  justify-center mt-8 border-t border-gray-300 pt-4 text-center text-xs text-gray-500">
-        <p>아리그린 - 제휴·문의 </p>
-        <a href="mailto:wooimiregreen@gmail.com" className="text-[#343434] hover:underline">
-          wooimiregreen@gmail.com
-        </a>{" "}
-        <p>Instargram </p>
-        <a href="https://www.instagram.com/wooimi_/" className="text-[#343434] hover:underline">
-          @wooimi_
-        </a>
+      <div className="flex md:flex-row flex-col text-xs justify-center gap-4 mt-8 border-t border-gray-300 pt-4 text-center text-gray-500">
+        <div className="flex justify-center items-center flex-row  gap-4">
+          <p>아리그린 - 제휴·문의 </p>
+          <a href="mailto:wooimiregreen@gmail.com" className="text-[#343434] hover:underline">
+            wooimiregreen@gmail.com
+          </a>
+        </div>
+        <div className="flex justify-center items-center flex-row  gap-4">
+          <p>Instagram </p>
+          <a href="https://www.instagram.com/wooimi_/" className="text-[#343434] hover:underline">
+            @wooimi_
+          </a>
+        </div>
       </div>
     </footer>
   );
