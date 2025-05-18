@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollMouse from "@/widgets/ScrollMouse";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,6 +178,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <ScrollMouse />
     </section>
   );
 }

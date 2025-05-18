@@ -12,7 +12,7 @@ export default function Footer() {
         {/* 설문 참여 섹션 */}
         <div className="flex justify-center gap-4 items-center ">
           <p className="text-sm md:text-lg font-semibold">
-            🎁 설문 참여하고 스타벅스 기프티콘 받기
+            🎁 설문 참여는 우이미에게 큰 도움이 됩니다
           </p>
           <Link
             href={surveyUrl}
