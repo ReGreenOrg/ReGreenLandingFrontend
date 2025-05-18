@@ -66,10 +66,10 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
           <input
             type="text"
             name="phonePart1"
-            placeholder="010"
+            value={"010"}
             maxLength={3}
             onChange={(e) => handleInputChange(e, 3)}
-            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base focus:ring-2 focus:ring-[#FF8EB3]"
+            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base  placeholder:text-gray-300  focus:ring-0"
           />
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
             placeholder="1234"
             maxLength={4}
             onChange={(e) => handleInputChange(e, 4)}
-            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base focus:ring-2 focus:ring-[#FF8EB3]"
+            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base focus:ring-2 placeholder:text-gray-300  focus:ring-[#FF8EB3]"
           />
           <input
             type="text"
@@ -85,7 +85,7 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
             placeholder="5678"
             maxLength={4}
             onChange={(e) => handleInputChange(e, 4)}
-            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base focus:ring-2 focus:ring-[#FF8EB3]"
+            className="border border-gray-300 rounded-lg p-3 w-1/3 text-center text-sm sm:text-base focus:ring-2 placeholder:text-gray-300  focus:ring-[#FF8EB3]"
           />
         </div>
 
