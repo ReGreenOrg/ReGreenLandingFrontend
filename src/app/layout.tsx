@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import pretendard from "./fonts/pretendard";
 import "./globals.css";
 import SmoothScrollProvider from "./provider";
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${pretendard.className} antialiased bg-white`}>
         <SmoothScrollProvider />
         {children}
+        <Analytics />
       </body>
     </html>
   );
