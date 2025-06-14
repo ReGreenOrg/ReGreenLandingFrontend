@@ -55,7 +55,7 @@ export default function PhoneNumberModal({ close }: PhoneNumberModalProps) {
   };
 
   return (
-    <div className="mx-6 flex flex-col items-center justify-center bg-gray-100 p-8 rounded-lg shadow-lg max-w-md md:mx-auto">
+    <div className="mx-6 flex flex-col items-center justify-center bg-gray-100 p-8 rounded-lg shadow-lg max-w-md md:mx-auto z-50">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-800">사전 등록</h1>
       <p className="text-sm sm:text-base text-gray-600 mb-6 text-center">
         출시 공지를 위해 핸드폰 번호를 입력해주세요.

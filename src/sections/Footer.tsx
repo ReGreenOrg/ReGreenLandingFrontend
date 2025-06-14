@@ -3,8 +3,7 @@
 import Link from "next/link";
 
 export default function Footer() {
-  const surveyUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSepvXDy1ZttAlt-kYwb4dUPjgw50hp6GIc4eXgj2LjtW9_0Dg/viewform";
+  const surveyUrl = "https://forms.gle/W1VxEPdgjwz18m5F8";
 
   return (
     <footer className="bg-gray-100 py-6">
@@ -25,7 +24,7 @@ export default function Footer() {
         </div>
       </div>
       {/* 하단 회사 정보 섹션 */}
-      <div className="flex md:flex-row flex-col text-xs justify-center gap-4 mt-8 border-t border-gray-300 pt-4 text-center text-gray-500">
+      <div className="flex md:flex-row flex-col justify-center gap-4 mt-8 border-t border-gray-300 pt-4 text-center text-md text-gray-500">
         <div className="flex justify-center items-center flex-row  gap-4">
           <p>아리그린 - 제휴·문의 </p>
           <a href="mailto:wooimiregreen@gmail.com" className="text-[#343434] hover:underline">
