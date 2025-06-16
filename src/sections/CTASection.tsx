@@ -29,7 +29,7 @@ export default function CTASection() {
       <section className="py-32 px-8 bg-white text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-1 md:mb-4">곧 정식 오픈!</h2>
         <p className="text-xl md:text-3xl font-semibold mb-4 mt-16">
-          🎉 우이미는 6월에 17일 정식 출시됩니다!
+          🎉 우이미는 6월 17일에 정식 출시됩니다!
         </p>
 
         <button
