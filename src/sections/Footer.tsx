@@ -3,7 +3,8 @@
 import Link from "next/link";
 
 export default function Footer() {
-  const surveyUrl = "https://forms.gle/W1VxEPdgjwz18m5F8";
+  const surveyUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLScbQVeW8qAliXDOMVDR10UjwcrRY5PmgVg9qC9TMAK77vDbgQ/viewform";
 
   return (
     <footer className="bg-gray-100 py-6">
@@ -11,7 +12,7 @@ export default function Footer() {
         {/* 설문 참여 섹션 */}
         <div className="flex justify-center gap-4 items-center ">
           <p className="text-sm md:text-lg font-semibold">
-            🎁 설문 참여는 우이미에게 큰 도움이 됩니다
+            🎁 부스 설문 참여는 우이미에게 큰 도움이 됩니다
           </p>
           <Link
             href={surveyUrl}
